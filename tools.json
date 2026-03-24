@@ -1,0 +1,36 @@
+{
+    "blogging": [
+      {
+        "name": "WordPress",
+        "description": "A platform for creating blogs and websites",
+        "link": "https://wordpress.com",
+        "tags": ["blog", "writing", "website"]
+      },
+      {
+        "name": "Medium",
+        "description": "A simple platform for writing and publishing articles",
+        "link": "https://medium.com",
+        "tags": ["blog", "writing", "articles"]
+      },
+      {
+        "name": "Blogger",
+        "description": "A simple and easy to use blog creation platform for getting your blog ideas live",
+        "link": "https://blogger.com",
+        "tags": ["blog", "writing", "websites"]
+      }
+    ],
+    "content_creation": [
+      {
+        "name": "Canva",
+        "description": "A tool for designing and editing graphics or visual content",
+        "link": "https://canva.com",
+        "tags": ["design", "graphics", "content", "images", "videos"]
+      },
+      {
+        "name": "CapCut",
+        "description": "A tool used for video editing and content creation",
+        "link": "https://capcut.com",
+        "tags": ["video", "editing", "content", "social media"]
+      }
+    ]
+  }
