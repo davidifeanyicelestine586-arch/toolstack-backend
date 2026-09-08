@@ -1,35 +1,87 @@
 # ToolStack Backend
 
-A Python backend project associated with the Tech Stack Architect/toolstack work.
+A small Python/FastAPI backend supporting the ToolStack technology-recommendation work.
+
+## Overview
+
+The current implementation exposes a simple API backed by a JSON tool catalog. It can return matching tools from a text query based on the tags defined in the catalog.
 
 ## Status
 
-**Status:** Supporting / experimental backend project.
+**Status:** Supporting / experimental backend project
 
-This repository should be evaluated from the implementation currently present in the source tree. Planned capabilities are not treated as completed functionality.
+The README describes the implementation currently present in the repository. Planned capabilities are not presented as completed functionality.
 
-## Getting started
+## Requirements
 
-Use a current Python 3 environment and install the dependencies defined by the repository when available.
+- Python 3
+- pip
 
-If dependency or environment configuration is required by the current implementation, keep local configuration outside version control.
+## Installation
 
-## Development
+Clone the repository and install the declared dependencies:
 
-Run the project using the entry point and development instructions present in the source tree. Add project-specific commands here when they are confirmed and stable.
+```bash
+git clone https://github.com/davidifeanyicelestine586-arch/toolstack-backend.git
+cd toolstack-backend
+python -m venv .venv
+```
 
-## Security
+Activate the virtual environment, then install dependencies:
 
-Do not commit API keys, credentials, environment files, tokens, or other secrets.
+```bash
+# macOS/Linux
+source .venv/bin/activate
 
-## Documentation standard
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
 
-This README intentionally stays concise. Detailed implementation history belongs in project records rather than the public overview.
+pip install -r requirements.txt
+```
+
+## Usage
+
+Start the FastAPI application with Uvicorn:
+
+```bash
+uvicorn main:app --reload
+```
+
+The local API is available at `http://127.0.0.1:8000`.
+
+Example endpoints:
+
+- `GET /` — basic health response
+- `GET /recommend?query=python` — returns catalog entries whose tags match the query
+
+FastAPI also provides interactive API documentation at `/docs` while the development server is running.
+
+## Configuration
+
+The current implementation reads its tool catalog from `tools.json` and does not document a required secret or environment-variable contract.
+
+Keep credentials, tokens, and local environment files outside version control.
+
+## Testing
+
+No automated test suite is currently documented. For basic verification, start the API and check the root and recommendation endpoints.
+
+## Documentation
+
+- [README](README.md) — project overview and setup
+- [CONTRIBUTING](CONTRIBUTING.md) — contribution guidance
+- [LICENSE](LICENSE) — MIT license
+
+## Demo and downloads
+
+- **Repository / download:** https://github.com/davidifeanyicelestine586-arch/toolstack-backend
+- **Live demo:** Not currently available
+- **Documentation:** https://github.com/davidifeanyicelestine586-arch/toolstack-backend/blob/main/README.md
+
+## Support
+
+Use the repository [issue tracker](https://github.com/davidifeanyicelestine586-arch/toolstack-backend/issues) for questions, bugs, and project discussion.
 
 ## License
 
-See [LICENSE](LICENSE).
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+MIT License. See [LICENSE](LICENSE).
